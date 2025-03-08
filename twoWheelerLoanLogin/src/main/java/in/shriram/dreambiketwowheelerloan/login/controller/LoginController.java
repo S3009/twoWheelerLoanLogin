@@ -46,15 +46,15 @@ public class LoginController {
 	
 	}
 	
-	@PutMapping("/updateLoanStatus/{customerId}/{status}")
-	public ResponseEntity<Customer> updateLoanStatus(@PathVariable("customerId") int customerId,
-			@PathVariable("status") String status){
-		
-		rt.put("http://localhost:7777/apploan/updateLoanStatus/"+customerId+"/"+status,SanctionLetter.class);
-
-		return new ResponseEntity<Customer>(HttpStatus.ACCEPTED);
-
-	}
+//	@PutMapping("/updateLoanStatus/{customerId}/{status}")
+//	public ResponseEntity<Customer> updateLoanStatus(@PathVariable("customerId") int customerId,
+//			@PathVariable("status") String status){
+//		
+//		rt.put("http://localhost:7777/apploan/updateLoanStatus/"+customerId+"/"+status,SanctionLetter.class);
+//
+//		return new ResponseEntity<Customer>(HttpStatus.ACCEPTED);
+//
+//	}
 	
 
 
