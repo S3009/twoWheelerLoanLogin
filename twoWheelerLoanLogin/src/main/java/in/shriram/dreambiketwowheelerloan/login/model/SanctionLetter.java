@@ -1,7 +1,6 @@
 package in.shriram.dreambiketwowheelerloan.login.model;
 
 import java.util.Date;
-
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -13,14 +12,12 @@ import lombok.Data;
 @Entity
 @Data
 public class SanctionLetter {
-	
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int sanctionId;
 	private Date sanctionDate;
 	private String applicantName;
 	private String contactDetails;
-	private String producthomeEquity;
 	private double loanAmtSanctioned;
 	private String interestType;
 	private float rateOfInterest;
@@ -30,8 +27,13 @@ public class SanctionLetter {
 	private double onRoadPrice;
 	private String status;
 
+
+
 	@Lob
-	@Column(length = 999999999)
+	@Column
 	private byte[] sanctionletterpdf; 
+
+
+
 
 }
