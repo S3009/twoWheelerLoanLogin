@@ -24,7 +24,7 @@ public class Customer {
 	private String customerGender;
 	private String customerMobileNumber;
 	private double customerAdditionalMobileNumber;
-	private double customerAmountPaidForHome;
+	private double customerAmountPaidForBike;
 	private double customerTotalLoanRequired;
 	private String customerEmail;
 	private String password;
@@ -32,7 +32,7 @@ public class Customer {
 	private double onRoadPrice;
 	private int requiredTenure;
 	private String interesType="Compound Interest";
-	
+	private String  userType="CUSTOMER";
 //	
 //
 //	
@@ -44,27 +44,27 @@ public class Customer {
 //	
 //	@OneToOne(cascade = CascadeType.ALL)
 //	private CustomerAddress custAddr;
-//	
+	
 //	@OneToOne(cascade = CascadeType.MERGE ,orphanRemoval = false)
 //	@JoinColumn(name = "cibilId")
 //	private Cibil cibil;
-//	
+	
 //	@OneToOne(cascade = CascadeType.ALL)
 //	private AccountDetails acdetails;
 //	
 //	@OneToOne(cascade = CascadeType.ALL)
 //	private GuarantorDetails gdetails;
 // 
-//	@OneToOne(cascade = CascadeType.ALL)
-//	private LoanDisbursement loandisburst;
-//	
+	@OneToOne(cascade = CascadeType.ALL)
+	private LoanDisbursement loandisburst;
+	
 //	@OneToOne(cascade = CascadeType.ALL)
 //	private Ledger led;
-//	
-//	@OneToOne(cascade = CascadeType.ALL)
-//	@JoinColumn(name = "sanctionId")
-//	private SanctionLetter sanctionletter;
-//
+	
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "sanctionId")
+	private SanctionLetter sanctionletter;
+
 //	@OneToOne(cascade = CascadeType.ALL)
 //	private CustomerVerification custVerification;
 
